@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
+from django.views import View
+
+from manager.models import Comments, Marks, Product
 
 
-def hello(request):
-    return HttpResponse('hello alina it s your planer')
+class Planer(View):
+    def get(self, request):
+        context = {"product": Product.objects.all()}
+        return render(request, 'title_planers.html', context)

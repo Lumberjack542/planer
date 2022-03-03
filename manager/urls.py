@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import Planer
 
 urlpatterns = [
-    path('', views.hello)
+    path('', Planer.as_view(), name='Planers-title')
 ]

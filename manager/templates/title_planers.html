@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Planers</title>
+</head>
+<body>
+
+    {% for el in product %}
+        <h1>{{ el.title }}</h1>
+        <h2>{{ el.description }}</h2>
+        <h2>{{ el.data }}</h2>
+
+        {% for comment in el.comments.all %}
+            <h5>{{ comment.text }}</h5>
+
+            <h6>{{ comment.data }}</h6>
+        {% endfor %}
+
+    {% endfor %}
+</body>
+</html>
