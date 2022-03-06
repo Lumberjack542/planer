@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Product',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(help_text='this is name of planer', max_length=150, verbose_name='Name of planer')),
+                ('title', models.CharField(help_text='this is name of manager', max_length=150, verbose_name='Name of manager')),
                 ('data', models.DateTimeField(auto_now_add=True, null=True)),
                 ('description', models.TextField()),
             ],

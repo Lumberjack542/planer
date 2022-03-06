@@ -5,8 +5,8 @@ from django.db import models
 
 class Product(models.Model):
     title = models.CharField(max_length=150,
-                             verbose_name='Name of planer',
-                             help_text='this is name of planer')
+                             verbose_name='Name of manager',
+                             help_text='this is name of manager')
     data = models.DateTimeField(auto_now_add=True, null=True)
     description = models.TextField()
 
